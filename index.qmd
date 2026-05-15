@@ -1,0 +1,57 @@
+---
+title: "Home"
+pagetitle: "Aaron Schecter"
+---
+
+::: {.page}
+
+::: {.hero}
+::: {.photo style="background-image: url('images/headshot.jpg');"}
+:::
+::: {.hero-text}
+[Aaron Schecter, Ph.D.]{.name-eyebrow}
+
+# Studying how people, teams, and [intelligent machines]{.em} work together.
+
+::: {.subtitle-cta}
+[Get in touch →](mailto:aschecter@uga.edu){.cta}
+[Download CV](cv.pdf){.cta-secondary}
+:::
+:::
+:::
+
+::: {.home-bio}
+I'm an Associate Professor of Management Information Systems at the University of Georgia's Terry College of Business, where I direct the AI for Business certificate program and serve as a Faculty Fellow at UGA's Institute for Artificial Intelligence. I work at the intersection of computational social science, human-AI collaboration, and quantitative methods — studying how groups, individuals, and increasingly capable machines coordinate, decide, and create together.
+
+My research has appeared in *MIS Quarterly*, *Information Systems Research*, *Research Policy*, and others, and has been supported by the Army Research Office, Army Research Lab, and NASA. I currently serve as an Associate Editor at *MIS Quarterly* and as an Associate Committee Chair for ACM CHI.
+:::
+
+::: {.chip-row}
+[Google Scholar](https://scholar.google.com/citations?user=QYXNseEAAAAJ&hl=en)
+[GitHub](https://github.com/aschecter)
+[LinkedIn](https://www.linkedin.com/in/aaron-schecter-49b49416)
+[ORCID](https://orcid.org/0000-0002-3186-7788)
+[aschecter@uga.edu](mailto:aschecter@uga.edu)
+:::
+
+::: {.talks-section}
+::: {.section-header}
+## Recent & Upcoming Talks
+[2026]{.section-meta}
+:::
+
+::: {.talks}
+- [Presented at HICSS, Maui [— Best Paper nominee]{.award}]{.talk-text}
+- [Moderated a panel at the SMC³ Supply Chain Conference, Atlanta]{.talk-text}
+- [Panelist at the AACRIS Conference, Atlanta]{.talk-text}
+- [Led executive workshops at the In2Leadership Conference, Nashville]{.talk-text}
+- [Invited talk at Stanford SIEPR]{.talk-text}
+- [Invited participant at the Lambert ANN-SONIC-NICO Workshop]{.talk-text}
+- [Invited talk at the University of Bern]{.talk-text} [Upcoming]{.talk-status .upcoming}
+- [Delivered a workshop at ECIS, Milan]{.talk-text} [Upcoming]{.talk-status .upcoming}
+- [Mentor at the AOM Doctoral Consortium, Philadelphia]{.talk-text} [Upcoming]{.talk-status .upcoming}
+:::
+
+:::
+
+:::

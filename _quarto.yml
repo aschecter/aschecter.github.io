@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "images/"
+    - "cv.pdf"
+
+website:
+  title: "Aaron Schecter"
+  site-url: "https://aschecter.github.io"
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "Workshops & Consulting"
+        href: workshops.qmd
+      - text: "Code"
+        href: code.qmd
+      - text: "Contact"
+        href: contact.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    page-layout: full
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">

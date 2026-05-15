@@ -1,0 +1,87 @@
+---
+title: "Teaching"
+pagetitle: "Teaching — Aaron Schecter"
+---
+
+::: {.page}
+
+[Teaching]{.page-eyebrow}
+
+# Building AI literacy that holds up in practice. {.page-title}
+
+::: {.page-intro}
+I teach at all three levels — doctoral, master's/MBA, and undergraduate — and direct Terry's AI for Business certificate program. My courses focus on the questions students will actually face once they leave: how to scope an AI project, how to evaluate whether it's working, and how to think clearly about what the technology does and doesn't change.
+:::
+
+::: {.inline-note}
+Course materials (syllabi, slides, sample assignments) are available on request — just [email me](mailto:aschecter@uga.edu).
+:::
+
+::: {.section}
+[Currently Teaching]{.section-label}
+
+::: {.item-row}
+::: {.item-row-label}
+[MIST 5460]{.code-label}
+
+## Agentic AI for Business Applications {.item-title}
+
+[Undergraduate]{.item-level}
+:::
+::: {.item-body}
+A new undergraduate course I developed at UGA covering the design, deployment, and governance of agentic AI systems in business contexts. Students learn how to scope tasks, build and orchestrate AI agents, and reason about reliability, evaluation, and risk in production settings.
+:::
+:::
+
+::: {.item-row}
+::: {.item-row-label}
+[MIST 9770]{.code-label}
+
+## Research Methods {.item-title}
+
+[Doctoral Seminar]{.item-level}
+:::
+::: {.item-body}
+Doctoral seminar covering quantitative research design, measurement, causal inference, and the analysis of complex (sequential, relational, multilevel) data structures. Emphasizes the methodological judgment that separates defensible empirical claims from confident-sounding ones.
+:::
+:::
+:::
+
+::: {.cert-block}
+::: {.cert-text}
+[Director]{.cert-eyebrow}
+
+## AI for Business Certificate
+
+Terry's undergraduate certificate equipping business students with practical AI literacy — covering machine learning fundamentals, generative AI, agentic systems, and the organizational and ethical questions that come with deploying these technologies at scale.
+:::
+
+[Learn more →](https://www.terry.uga.edu/certificates/artificial-intelligence/){.cert-button}
+:::
+
+::: {.section}
+[Other Courses Developed or Taught at UGA]{.section-label}
+
+::: {.other-courses-grid}
+::: {.other-course}
+[MIST 5635 / 7635]{.code} Machine Learning & Business Analytics
+:::
+::: {.other-course}
+[MIST 5620 / 7770]{.code} Business Intelligence
+:::
+::: {.other-course}
+[MIST 5750 / 7690]{.code} Business Process Management
+:::
+::: {.other-course}
+[MIST 7990]{.code} MSBA Capstone
+:::
+::: {.other-course}
+[MIST 5990]{.code} Research in MIS
+:::
+::: {.other-course}
+[INTB 7100]{.code} Special Topics in International Business
+:::
+:::
+:::
+
+:::

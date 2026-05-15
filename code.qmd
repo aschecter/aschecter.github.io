@@ -1,0 +1,16 @@
+---
+title: "Code"
+pagetitle: "Code & Data — Aaron Schecter"
+---
+
+::: {.page}
+
+[Code & Data]{.page-eyebrow}
+
+# Replication materials and selected research code. {.page-title}
+
+::: {.page-intro}
+My code and replication materials live on [GitHub](https://github.com/aschecter). Featured repositories will appear here as I curate them.
+:::
+
+:::

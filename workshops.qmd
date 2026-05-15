@@ -1,0 +1,87 @@
+---
+title: "Workshops & Consulting"
+pagetitle: "Workshops & Consulting — Aaron Schecter"
+---
+
+::: {.page}
+
+[Workshops & Consulting]{.page-eyebrow}
+
+# Helping organizations use AI well — not just deploy it. {.page-title}
+
+::: {.page-intro}
+Most AI initiatives stall not because the technology fails, but because the questions around it go unasked. What does this system actually change about how decisions get made? How do you know whether it's working? Who's accountable when it isn't?
+:::
+
+::: {.page-intro}
+I run workshops and provide subject-matter expertise to corporate teams, executive audiences, and federal grant teams. Engagements are designed to be substantive rather than promotional: participants leave with frameworks they can use, not slogans.
+:::
+
+<div style="height: 56px;"></div>
+
+::: {.section}
+[Featured Offerings]{.section-label}
+
+::: {.item-row}
+::: {.item-row-label}
+## Leveraging Agentic AI {.item-title}
+:::
+::: {.item-body}
+A workshop on how agentic AI systems differ from chatbots and copilots, what they can and can't reliably do today, and how to design workflows that take advantage of agency without inheriting its failure modes. Adaptable from a half-day executive briefing to a multi-day applied workshop.
+:::
+:::
+
+::: {.item-row}
+::: {.item-row-label}
+## AI and ML Fundamentals {.item-title}
+:::
+::: {.item-body}
+Foundational machine learning and AI literacy for non-technical decision-makers. Builds enough conceptual depth to ask the right questions of vendors, data scientists, and internal teams — without pretending to turn participants into ML engineers.
+:::
+:::
+
+::: {.item-row}
+::: {.item-row-label}
+## AI Decision Audits {.item-title}
+:::
+::: {.item-body}
+A structured review of how AI is being used in an organization's decision processes — surfacing the assumptions, failure modes, and governance gaps that tend to accumulate quietly once a system is deployed.
+:::
+:::
+:::
+
+::: {.section style="margin-bottom: 144px;"}
+[Also Available]{.section-label}
+
+::: {.also-grid}
+::: {.also-item}
+### Human-AI Teaming
+
+A workshop on how AI changes the way teams work, communicate, and assign credit, drawing on research on advice utilization, algorithmic appreciation, and the valuation of AI-augmented work.
+:::
+
+::: {.also-item}
+### Social Network Analysis for Organizations
+
+Network methods for surfacing coordination patterns, knowledge bottlenecks, and informal influence structures that org charts miss.
+:::
+
+::: {.also-item}
+### Federal Proposal SME Support
+
+Methodological and substantive expertise for grant proposals involving human-AI teaming, computational social science, or quantitative research design.
+:::
+:::
+:::
+
+::: {.cta-block}
+::: {.cta-text}
+## Looking to scope an engagement?
+
+Workshops can be tailored to industry, audience seniority, and time available. Most engagements start with a 30-minute call to scope.
+:::
+
+[Get in touch →](mailto:aschecter@uga.edu){.cta-button}
+:::
+
+:::

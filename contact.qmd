@@ -1,0 +1,83 @@
+---
+title: "Contact"
+pagetitle: "Contact — Aaron Schecter"
+---
+
+::: {.page}
+
+[Contact]{.page-eyebrow}
+
+# Let's talk. {.page-title}
+
+::: {.contact-grid}
+::: {.contact-card .primary}
+[Email]{.contact-card-eyebrow}
+
+[aschecter@uga.edu →](mailto:aschecter@uga.edu){.email-large}
+
+The fastest route for any inquiry — research collaboration, prospective students, workshops, media, or anything else.
+:::
+
+::: {.contact-card}
+[Office]{.contact-card-eyebrow}
+
+## Terry College of Business
+
+C419 Benson Hall\
+630 S. Lumpkin St.\
+Athens, GA 30602
+
+[Office hours by appointment]{.meta}
+:::
+:::
+
+::: {.audience-section}
+[A Note for Specific Audiences]{.section-label}
+
+::: {.audience}
+### Prospective PhD Students
+
+::: {.audience-body}
+I take students through [Terry's MIS doctoral program](https://www.terry.uga.edu/phd/management-information-systems/). Strong candidates typically have quantitative training (statistics, computer science, engineering, or a quantitative social science), some research exposure, and a substantive interest in one or more of my research streams.
+
+The best way to gauge fit is to read a recent paper of mine and tell me what you'd do differently. Generic interest emails are fine, but specific ones get specific answers.
+:::
+:::
+
+::: {.audience}
+### Workshops & Consulting Inquiries
+
+::: {.audience-body}
+Briefly describe your organization, audience, and what you're hoping to accomplish. Most engagements start with a 30-minute call to scope. See [workshops & consulting](workshops.qmd) for current offerings.
+:::
+:::
+
+::: {.audience}
+### Media & Speaking
+
+::: {.audience-body}
+Happy to talk to journalists about human-AI collaboration, algorithmic decision-making, computational social science, or open-source software dynamics.
+:::
+:::
+
+::: {.audience}
+### Research Collaboration
+
+::: {.audience-body}
+I'm always interested in conversations with researchers working on adjacent problems — relational and sequential data methods, human-AI teaming, large-group coordination, or the methodology of measuring AI's effects on work. Email with a sentence or two on what you're working on.
+:::
+:::
+:::
+
+::: {.social-section}
+[Elsewhere]{.section-label}
+
+::: {.social-grid}
+[Google Scholar](https://scholar.google.com/citations?user=QYXNseEAAAAJ&hl=en)
+[GitHub](https://github.com/aschecter)
+[LinkedIn](https://www.linkedin.com/in/aaron-schecter-49b49416)
+[ORCID](https://orcid.org/0000-0002-3186-7788)
+:::
+:::
+
+:::
