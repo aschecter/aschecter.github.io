@@ -50,7 +50,7 @@ A structured review of how AI is being used in an organization's decision proces
 :::
 :::
 
-::: {.section style="margin-bottom: 144px;"}
+::: {.section}
 [Also Available]{.section-label}
 
 ::: {.also-grid}
