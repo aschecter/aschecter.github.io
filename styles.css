@@ -11,7 +11,23 @@
   --accent-deep: #0f2540;
   --bg: #ffffff;
   --link-color: #1e3a5f; /* fallback for Quarto's variable lookup */
+  --accent-tint: #f3f6fa;
+  --surface: #fafaf9;
+  --nav-h: 68px;
+  --ease: cubic-bezier(.2,.7,.2,1);
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 24px);
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
+::selection { background: var(--accent); color: #fff; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
 html, body {
   margin: 0;
@@ -63,6 +79,11 @@ div.column-page,
   max-width: 100% !important;
 }
 
+/* Quarto adds a rule + bottom margin under every h2/h3; we style headings ourselves */
+.page h2, .page h3 { border-bottom: none !important; padding-bottom: 0 !important; }
+.page h1, .page h2, .page h3 { text-wrap: balance; }
+.page p, .page li { text-wrap: pretty; }
+
 /* Kill Bootstrap link defaults; let our classes own color */
 .page a,
 .page a:visited {
@@ -70,22 +91,29 @@ div.column-page,
   text-decoration: none;
 }
 
-/* ===== NAVBAR (override Quarto's Bootstrap navbar) ===== */
+/* ===== NAVBAR ===== */
+/* Fixed + headroom (Quarto): slides away on scroll down, returns on scroll up. */
+#quarto-header { z-index: 1030; }
 .navbar {
-  background: var(--bg) !important;
-  border-bottom: none !important;
+  background: rgba(255,255,255,0.86) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--rule-soft) !important;
   box-shadow: none !important;
-  padding: 48px 56px 0 !important;
-  max-width: 1120px !important;
-  margin: 0 auto !important;
-  margin-bottom: 88px !important;
+  padding: 0 !important;
+  min-height: var(--nav-h);
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100%;
 }
 .navbar > .container-fluid,
 .navbar > .container,
 .navbar .navbar-container {
-  padding: 0 !important;
-  max-width: 100% !important;
-  margin: 0 !important;
+  padding: 0 56px !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  width: 100%;
+  min-height: var(--nav-h);
 }
 .navbar-brand {
   font-weight: 700 !important;
@@ -95,6 +123,7 @@ div.column-page,
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
+  margin-right: 40px !important;
 }
 .navbar-brand::before {
   content: "";
@@ -104,22 +133,44 @@ div.column-page,
   border-radius: 50%;
   display: inline-block;
 }
-.navbar-nav { gap: 36px !important; flex-direction: row !important; }
+.navbar-nav { gap: 32px !important; }
 .navbar-nav .nav-link {
   color: var(--muted) !important;
   font-weight: 500 !important;
   font-size: 14px !important;
-  padding: 0 !important;
-  transition: color 0.15s;
+  padding: 6px 0 !important;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.2s var(--ease);
 }
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active { color: var(--ink) !important; }
+.navbar-nav .nav-link:hover { color: var(--ink) !important; }
+.navbar-nav .nav-link.active {
+  color: var(--ink) !important;
+  border-bottom-color: var(--accent);
+}
+.navbar .navbar-toggler { border: none; box-shadow: none !important; padding: 8px; }
+.navbar .navbar-toggler-icon { filter: invert(1) brightness(0.3); }
+.navbar .quarto-search-icon, .navbar .aa-DetachedSearchButton { color: var(--ink); }
+@media (min-width: 992px) {
+  .navbar-nav { flex-direction: row !important; }
+}
+@media (max-width: 991.98px) {
+  .navbar > .container-fluid, .navbar .navbar-container { padding: 0 24px !important; }
+  .navbar-collapse {
+    background: #fff;
+    border-top: 1px solid var(--rule-soft);
+    margin: 0 -24px;
+    padding: 12px 24px 20px;
+  }
+  .navbar-nav { gap: 4px !important; }
+  .navbar-nav .nav-link { padding: 10px 0 !important; font-size: 16px !important; border-bottom: none; }
+}
 
 /* ===== PAGE WRAPPER ===== */
 .page {
   max-width: 1120px;
   margin: 0 auto !important;
-  padding: 48px 56px 120px !important;
+  padding: 72px 56px 120px !important;
+  min-height: calc(100vh - 80px);
 }
 
 /* ===== PAGE HEADER (shared) ===== */
@@ -182,15 +233,16 @@ h1.page-title .em { color: var(--accent); }
 .hero {
   display: grid;
   grid-template-columns: 280px 1fr !important;
-  gap: 72px;
-  margin-bottom: 80px;
+  gap: 80px;
+  margin-bottom: 72px;
   align-items: center;
 }
 .hero .photo {
   width: 280px;
   height: 340px;
   background: linear-gradient(135deg, #2a2a2a 0%, #5a1818 100%);
-  border-radius: 4px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(10,10,10,.06), 0 12px 32px -12px rgba(10,10,10,.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,9 +288,9 @@ h1.page-title .em { color: var(--accent); }
   border-radius: 6px;
   font-size: 14px;
   font-weight: 600;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
-.cta:hover { background: var(--accent) !important; color: white !important; }
+.cta:hover { background: var(--accent) !important; color: white !important; transform: translateY(-1px); box-shadow: 0 6px 16px -6px rgba(30,58,95,.5); }
 .cta-secondary {
   color: var(--muted) !important;
   text-decoration: none !important;
@@ -249,7 +301,7 @@ h1.page-title .em { color: var(--accent); }
 
 .home-bio {
   max-width: 760px;
-  margin: 0 0 64px 0;
+  margin: 0 0 40px 0;
   font-size: 18px;
   line-height: 1.65;
 }
@@ -265,7 +317,7 @@ h1.page-title .em { color: var(--accent); }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 120px;
+  margin-bottom: 88px;
 }
 .chip-row a {
   display: inline-flex !important;
@@ -281,8 +333,9 @@ h1.page-title .em { color: var(--accent); }
   background: white !important;
 }
 .chip-row a:hover {
-  border-color: var(--ink) !important;
-  color: var(--ink) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: var(--accent-tint) !important;
 }
 
 /* Talks list — Markdown <ul> inside .talks div */
@@ -297,7 +350,7 @@ h1.page-title .em { color: var(--accent); }
   margin-bottom: 40px;
 }
 .talks-section h2 {
-  font-size: 32px !important;
+  font-size: 30px !important;
   font-weight: 700;
   margin: 0 !important;
   letter-spacing: -0.025em;
@@ -326,7 +379,7 @@ ul.talks li {
   border-top: 1px solid var(--rule-soft);
   font-size: 16.5px;
   color: var(--ink);
-  transition: padding-left 0.2s;
+  transition: padding-left 0.25s var(--ease), background 0.2s;
   line-height: 1.5;
   list-style: none !important;
 }
@@ -398,7 +451,8 @@ h2.stream-title {
   color: white;
   border-radius: 6px;
   position: sticky;
-  top: 32px;
+  top: calc(var(--nav-h) + 24px);
+  border-radius: 10px;
 }
 .featured * { color: inherit; }
 .featured-eyebrow {
@@ -520,6 +574,9 @@ ul.pubs a:hover { border-color: var(--ink); }
 }
 
 .section { margin-bottom: 96px; }
+/* Pandoc turns ::: {.section} into a bare <section>, dropping the class */
+.page section:not([class]) { margin-bottom: 96px; }
+main.content { margin-top: 0 !important; margin-bottom: 0 !important; padding-top: 0 !important; }
 
 /* Workshops — also-available grid */
 .also-grid {
@@ -529,9 +586,12 @@ ul.pubs a:hover { border-color: var(--ink); }
 }
 .also-item {
   padding: 24px;
-  background: #fafafa;
-  border-radius: 6px;
+  background: var(--surface);
+  border: 1px solid var(--rule-soft);
+  border-radius: 10px;
+  transition: border-color .2s, transform .25s var(--ease);
 }
+.also-item:hover { border-color: var(--rule); transform: translateY(-2px); }
 .also-item h3 {
   font-size: 17px !important;
   font-weight: 700;
@@ -552,7 +612,7 @@ ul.pubs a:hover { border-color: var(--ink); }
   padding: 48px;
   background: var(--accent);
   color: white;
-  border-radius: 6px;
+  border-radius: 10px;
   margin-bottom: 96px;
   display: grid;
   grid-template-columns: 1fr auto !important;
@@ -628,7 +688,7 @@ ul.pubs a:hover { border-color: var(--ink); }
   padding: 48px;
   background: var(--accent);
   color: white;
-  border-radius: 6px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -661,9 +721,10 @@ ul.pubs a:hover { border-color: var(--ink); }
 .contact-card {
   padding: 36px;
   border: 1px solid var(--rule);
-  border-radius: 6px;
-  transition: border-color 0.15s;
+  border-radius: 10px;
+  transition: border-color 0.15s, box-shadow 0.2s;
 }
+.contact-card:not(.primary):hover { border-color: var(--muted); }
 .contact-card.primary {
   background: var(--accent);
   color: white;
@@ -770,16 +831,26 @@ ul.pubs a:hover { border-color: var(--ink); }
   background: white !important;
 }
 .social-grid a:hover {
-  border-color: var(--ink) !important;
-  color: var(--ink) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: var(--accent-tint) !important;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .page { padding: 32px 24px 80px !important; }
-  .navbar { padding: 32px 24px 0 !important; margin-bottom: 56px !important; }
+  :root { --nav-h: 60px; }
+  .page { padding: 40px 24px 80px !important; }
+  .hero { margin-bottom: 48px; }
+  .chip-row { margin-bottom: 64px; }
+  .page section:not([class]), .section, .cert-block, .contact-grid, .audience-section, .streams-layout { margin-bottom: 64px; }
+  .cert-block, .cta-block { padding: 32px 24px; }
+  .contact-card { padding: 28px 24px; }
+  .talks ul li, ul.talks li { flex-wrap: wrap; gap: 8px 16px; }
+  .talks-section h2 { font-size: 26px !important; }
+  h2.stream-title { font-size: 24px !important; }
+  .item-row .item-title { font-size: 22px !important; }
   .hero { grid-template-columns: 1fr !important; gap: 32px; }
-  .hero .photo { width: 200px; height: 240px; }
+  .hero .photo { width: 100%; max-width: 280px; height: auto; aspect-ratio: 280/340; }
   .hero h1, h1.page-title { font-size: 40px !important; }
   .streams-layout { grid-template-columns: 1fr !important; gap: 48px; }
   .featured { position: static; }
